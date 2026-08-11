@@ -1,6 +1,9 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.12.3,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+purelib = "src/xsref/tables"
 
 [project]
 name = "xsref"
@@ -20,8 +23,5 @@ dependencies = [
 ]
 readme = "README.md"
 
-[project.optional-dependencies]
+[dependency-groups]
 test = ["pytest"]
-
-[tool.setuptools.package-data]
-xsref = ["tables/**/*"]
