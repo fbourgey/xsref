@@ -25,3 +25,4 @@ readme = "README.md"
 
 [dependency-groups]
 test = ["pytest"]
+lint = ["ruff>=0.12.0"]
